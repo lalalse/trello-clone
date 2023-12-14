@@ -1,3 +1,32 @@
 {
-  "extends": "next/core-web-vitals"
+  "plugins": [
+    "@stylistic"
+  ],
+  "extends": [
+    "next/core-web-vitals"
+  ],
+  "rules": {
+    "@stylistic/no-trailing-spaces": "error",
+    "@stylistic/object-curly-spacing": [
+      "error",
+      "always"
+    ],
+    "@stylistic/block-spacing": [
+      "error"
+    ],
+    "@stylistic/semi": [
+      "error",
+      "never"
+    ],
+    "@stylistic/quotes": [
+      "error",
+      "double"
+    ],
+    "@stylistic/no-multiple-empty-lines": "error",
+    "@stylistic/jsx-equals-spacing": [
+      "error",
+      "never"
+    ],
+    "@stylistic/jsx-one-expression-per-line": "error"
+  }
 }
