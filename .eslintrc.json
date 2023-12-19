@@ -27,6 +27,16 @@
       "error",
       "never"
     ],
-    "@stylistic/jsx-one-expression-per-line": "error"
+    "@stylistic/jsx-one-expression-per-line": "error",
+    "@stylistic/jsx-first-prop-new-line": [
+      "error",
+      "multiline"
+    ],
+    "@stylistic/jsx-tag-spacing": [
+      "error",
+      {
+        "beforeSelpClosing": "proportional-always"
+      }
+    ]
   }
 }
