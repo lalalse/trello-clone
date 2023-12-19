@@ -12,6 +12,7 @@ import {
 import { AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
+import { Skeleton } from "@/components/ui/skeleton"
 
 
 
@@ -79,6 +80,7 @@ export const NavItem = ({
             <div className="w-7 h-7 relative">
               <Image
                 fill
+                sizes="1.75rem"
                 src={organization.imageUrl}
                 alt="Organization"
                 className="rounded-sm object-cover"
@@ -106,5 +108,17 @@ export const NavItem = ({
         </AccordionContent>
       </AccordionItem >
     </div >
+  )
+}
+
+
+NavItem.Skeleton = function SkeletonNavItem() {
+  return (
+    <div className="flex items-center gap-x-2">
+      <div className="w-10 h-10 relative shrink-0">
+        <Skeleton className="h-full w-full absolute" />
+      </div>
+      <Skeleton className="h-10 w-full" />
+    </div>
   )
 }
