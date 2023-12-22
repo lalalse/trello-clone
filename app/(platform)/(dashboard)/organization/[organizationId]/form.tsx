@@ -1,11 +1,8 @@
 "use client"
 
 import { createBoard } from "@/actions/create-board"
-import { Button } from "@/components/ui/button"
-import { useFormState } from "react-dom"
 import { FormInput } from "@/components/form/form-input"
 import { useAction } from "@/lib/hooks/use-action"
-import { revalidatePath } from "next/cache"
 import { FormSubmit } from "@/components/form/form-submit"
 
 export const Form = () => {
