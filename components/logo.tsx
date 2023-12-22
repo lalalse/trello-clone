@@ -15,8 +15,8 @@ export const Logo = () => {
         <Image
           src="/logo.svg"
           alt="Logo"
-          height={30}
           width={30}
+          height={20}
         />
         <p className={cn("text-lg h-full text-neutral-700", headingFont.className)}>
           Taskify
