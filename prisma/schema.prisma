@@ -6,13 +6,21 @@ generator client {
 }
 
 datasource db {
-  provider = "mysql"
-  url      = env("DATABASE_URL")
-  relationMode  = "prisma"
+  provider     = "mysql"
+  url          = env("DATABASE_URL")
+  relationMode = "prisma"
 }
 
 model Board {
-  id String @id @default(uuid())
-  
-  title String
+  id            String @id @default(uuid())
+  orgId         String
+  title         String
+  imgId         String
+  imgThumbUrl   String @db.Text
+  imgFullUrl    String @db.Text
+  imgUserName   String @db.Text
+  imgLinkHTML String @db.Text
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }
